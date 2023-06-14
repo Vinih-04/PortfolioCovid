@@ -19,7 +19,7 @@ SELECT *
 FROM #table2
 WHERE DeathPercentage = (SELECT MAX(DeathPercentage) FROM #table2)
 
---Porcentagem de casos Brasil
+--Porcentagem de casos Brazil
 SELECT location, date, total_cases, population, (CAST(total_cases as float)/CAST(population as float))*100 AS CasePercentage
 FROM CovidPortfolio..Death_Information
 WHERE location = 'Brazil'
@@ -59,7 +59,7 @@ ORDER BY 1
 SELECT *
 FROM CovidPortfolio..Vaccinations_Information
 ORDER BY 3,4
--- Porcentagem de Testes População Países
+-- Porcentagem de Testes PopulaÃ§Ã£o PaÃ­ses
 SELECT dea.location, MAX(CAST(dea.population AS float)) AS Population, 
 MAX(CAST(dea.total_cases AS float)) AS Cases, 
 MAX(CAST(vac.total_vaccinations AS float)) AS Vaccination,
